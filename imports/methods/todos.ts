@@ -6,8 +6,7 @@ Meteor.methods({
   addTodo(content: string) {
     Todos.insert({
       content
-    });
-    console.log( "doron");
+    });    
   },
   removeTodo(_id: string) {
     Todos.remove({
