@@ -35,7 +35,6 @@ Meteor.startup(() => {
     try {
 
       document = await WebAppInternals.getBoilerplate(request, WebApp.defaultArch);
-      console.log( "doron2");
       // Integrate Angular's router with Meteor
       const url = request.url;
 
