@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "debug": "meteor run --inspect",
     "test": "TEST_BROWSER_DRIVER=phantomjs meteor test --driver-package=ardatan:mocha",
     "test:ci": "TEST_BROWSER_DRIVER=phantomjs meteor test --driver-package=ardatan:mocha --once"
   },
@@ -17,7 +18,9 @@
     "@angular/platform-browser-dynamic": "^5.0.3",
     "@angular/platform-server": "^5.2.5",
     "@angular/router": "^5.0.3",
+    "@ng-bootstrap/ng-bootstrap": "^1.1.2",
     "babel-runtime": "^6.20.0",
+    "bootstrap": "^4.0.0",
     "meteor-node-stubs": "~0.3.0",
     "meteor-rxjs": "^0.4.8",
     "rxjs": "^5.5.0",

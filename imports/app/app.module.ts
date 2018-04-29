@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from '../ui/pages/todo-list/todo-list.component';
 import { PageNotFoundComponent } from '../ui/pages/page-not-found/page-not-found.component';
 import { AppRoutingModule } from '../ui/router/app-routing.module';
+import { MainTableComponent } from '../ui/pages/main-table/main-table.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   imports: [
@@ -19,10 +21,12 @@ import { AppRoutingModule } from '../ui/router/app-routing.module';
     }),
     FormsModule,
     AppRoutingModule,
+    NgbModule.forRoot(),
   ],
   declarations: [
     AppComponent,
     TodoListComponent,
+    MainTableComponent,
     PageNotFoundComponent
   ],
   bootstrap: [
