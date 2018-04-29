@@ -1,0 +1,22 @@
+[
+  {
+    "id": 11,
+    "record_type":1,
+    "rule_identifiers": "main_FW00" ,
+    "hits":3200
+  },
+  {
+    "id": "12" ,
+    "record_type":2,
+    "rule_identifiers": "main_FW002" ,
+    "hits":5800
+  }
+  ,
+  {
+    "id": 13,
+    "record_type":3,
+    "rule_identifiers": "main_FW400" ,
+    "hits":300
+  }
+
+]

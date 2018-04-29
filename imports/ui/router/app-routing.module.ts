@@ -6,7 +6,7 @@ import { MainTableComponent } from 'imports/ui/pages/main-table/main-table.compo
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/todoList', pathMatch: 'full' },
+  { path: '', redirectTo: '/mainTable', pathMatch: 'full' },
   { path: 'todoList', component: TodoListComponent },
   { path: 'mainTable', component: MainTableComponent },
   { path: 'todoAdd', loadChildren: '../pages/todo-add/todo-add.module#TodoAddModule', data: { title: 'Add Todo' } },
