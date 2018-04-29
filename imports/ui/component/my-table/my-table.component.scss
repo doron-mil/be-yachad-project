@@ -1,0 +1,114 @@
+h2{
+  text-align: center;
+}
+
+.toggle{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+table {
+  width: 100%;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  margin:50px auto;
+  background: 	#f7f8fa;
+  box-shadow: 1px 1px 1px #999;
+  border-spacing: 0px;
+  border: 7px #f7f8fa solid;
+  /*box-sizing: border-box;*/
+  /*border-collapse: collapse;*/
+
+}
+
+thead {
+  /*border-spacing: 15px;*/
+  background: #e3e4e6;
+  border-color: #e3e4e6;
+
+  margin:0px auto;
+  width: 50px;
+}
+tbody {
+  border-collapse: collapse;
+  -webkit-border-horizontal-spacing: 20px;
+}
+
+th {
+  padding: 10px;
+  background: #e3e4e6;
+  border-color: #e3e4e6;
+  border-collapse: collapse;
+  color: 	#727781;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+tr{
+  border-spacing: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  /*display: block;*/
+}
+
+td {
+  border-left: 2px #b6babd dotted;
+  background: white;
+  text-align: left;
+  font-size: 18px;
+  padding-top: .5em;
+  padding-bottom: .5em;
+
+
+  /*border-bottom: 2px black solid;*/
+
+
+}
+
+td:not(.toggleCol){
+  text-indent: 20px;
+}
+
+td.toggleCol{
+  table-layout: fixed;
+  border: 0px none ;
+}
+
+tr.expansededTr td{
+  border: 0px none ;
+}
+tr:not(.expansededTr) td{
+  border-bottom: 2px #b6babd solid;
+}
+
+tr.trExpansion td{
+  border-top: 1px #b6babd solid;
+  border-bottom: 2px #b6babd solid;
+}
+
+
+tr.recordType1 td:first-of-type{
+  border-left: 4px red solid;
+}
+
+tr.recordType2 td:first-of-type{
+  border-left: 4px yellow solid;
+}
+
+tr.recordType3 td:first-of-type{
+  border-left: 4px magenta solid;
+}
+
+
+div.expansionDiv{
+  display: table-cell;
+  text-align: -webkit-center;
+  float:left;
+  width:30%;
+}
+
+div.expansionDiv.right{
+  float:right;
+  width:69%;
+  border-left: 1px #b6babd solid;
+}

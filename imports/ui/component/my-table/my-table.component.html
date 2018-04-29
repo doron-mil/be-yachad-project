@@ -1,0 +1,61 @@
+<div>
+  <h2>My Table </h2>
+
+  <table width="100%">
+    <thead>
+      <tr>
+        <th *ngFor="let col of cols_meta" width="{{ col.col_width}}%">
+          {{ col.header_name}}
+        </th>
+
+        <th >
+        </th>
+      </tr>
+    </thead>
+
+    <tbody >
+
+      <ng-container *ngFor="let row of rows" >
+        <tr [className]="getClassName( row )">
+          <td *ngFor="let col of cols_meta" class="{{col.data_class}}">
+            <ng-template appDynamicColContent [dynamicRow]="row" [colMetaData]="col"></ng-template>
+          </td>
+
+          <td class="toggleCol">
+
+            <div *ngIf="!row.isExpanded">
+              <button  (click)="rowClick(row)" class="toggle">
+                <img width="13" alt="Hits" src="expand.png" />
+              </button>
+            </div>
+            <div *ngIf="row.isExpanded">
+              <button  (click)="rowClick(row)" class="toggle">
+                <img width="13" alt="Hits" src="collapse.png" />
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr *ngIf="row.isExpanded" [className]="'trExpansion ' + getClassName( row )" >
+          <td  style="table-layout: fixed;" [attr.colspan]="(col_count +1)">
+
+            <div class="expansionDiv"  >
+              <img width="13" alt="Hits" src="Iconsmind-Outline-Target.ico" />
+              {{ row.hits}} Hits
+            </div>
+            <div class="expansionDiv right" >
+              <img width="13" alt="Hits" src="calendar.svg" />
+              {{ row.published_date | date:'MMM d, y'}}
+            </div>
+          </td>
+        </tr>
+
+      </ng-container>
+
+      <!--<app-my-tr *ngFor="let row of rows" [rowData]="row" [colsMetaData]="cols_meta">-->
+
+      <!--</app-my-tr>-->
+
+    </tbody>
+  </table>
+
+</div>
